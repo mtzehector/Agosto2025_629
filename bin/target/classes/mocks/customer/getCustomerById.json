@@ -1,0 +1,7 @@
+// getCustomerById.json
+{
+  "id": "10001",
+  "href": "/tmf-api/customer/v5/customer/10001",
+  "name": "ACME Corporation",
+  "status": "active"
+}

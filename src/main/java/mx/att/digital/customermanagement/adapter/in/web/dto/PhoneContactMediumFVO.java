@@ -1,0 +1,122 @@
+package mx.att.digital.customermanagement.adapter.in.web.dto;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.annotation.Generated;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+/**
+ * PhoneContactMediumFVO
+ */
+
+
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.10.0")
+public class PhoneContactMediumFVO extends ContactMediumFVO implements Serializable {
+
+  private static final long serialVersionUID = 1L;
+
+  private String phoneNumber;
+
+  public PhoneContactMediumFVO() {
+    super();
+  }
+
+  /**
+   * Constructor with only required parameters
+   */
+  public PhoneContactMediumFVO(String atType) {
+    super(atType);
+  }
+
+  public PhoneContactMediumFVO phoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+  /**
+   * The phone number of the contact
+   * @return phoneNumber
+   */
+  
+  @Schema(name = "phoneNumber", description = "The phone number of the contact", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty("phoneNumber")
+  public String getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  public void setPhoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+  }
+
+
+  public PhoneContactMediumFVO atType(String atType) {
+    super.atType(atType);
+    return this;
+  }
+
+  public PhoneContactMediumFVO atBaseType(String atBaseType) {
+    super.atBaseType(atBaseType);
+    return this;
+  }
+
+  public PhoneContactMediumFVO atSchemaLocation(String atSchemaLocation) {
+    super.atSchemaLocation(atSchemaLocation);
+    return this;
+  }
+
+  public PhoneContactMediumFVO preferred(Boolean preferred) {
+    super.preferred(preferred);
+    return this;
+  }
+
+  public PhoneContactMediumFVO contactType(String contactType) {
+    super.contactType(contactType);
+    return this;
+  }
+
+  public PhoneContactMediumFVO validFor(TimePeriod validFor) {
+    super.validFor(validFor);
+    return this;
+  }
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    PhoneContactMediumFVO phoneContactMediumFVO = (PhoneContactMediumFVO) o;
+    return Objects.equals(this.phoneNumber, phoneContactMediumFVO.phoneNumber) &&
+        super.equals(o);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(phoneNumber, super.hashCode());
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class PhoneContactMediumFVO {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

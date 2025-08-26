@@ -1,0 +1,31 @@
+package mx.att.digital.customermanagement.config;
+
+import mx.att.digital.customermanagement.adapter.in.web.dto.IndividualStateType;
+import mx.att.digital.customermanagement.adapter.in.web.dto.OrganizationStateType;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.convert.converter.Converter;
+
+@Configuration
+public class EnumConverterConfiguration {
+
+    @Bean(name = "mx.att.digital.customermanagement.config.EnumConverterConfiguration.individualStateTypeConverter")
+    Converter<String, IndividualStateType> individualStateTypeConverter() {
+        return new Converter<String, IndividualStateType>() {
+            @Override
+            public IndividualStateType convert(String source) {
+                return IndividualStateType.fromValue(source);
+            }
+        };
+    }
+    @Bean(name = "mx.att.digital.customermanagement.config.EnumConverterConfiguration.organizationStateTypeConverter")
+    Converter<String, OrganizationStateType> organizationStateTypeConverter() {
+        return new Converter<String, OrganizationStateType>() {
+            @Override
+            public OrganizationStateType convert(String source) {
+                return OrganizationStateType.fromValue(source);
+            }
+        };
+    }
+
+}
