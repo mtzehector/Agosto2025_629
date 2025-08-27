@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
@@ -47,7 +48,9 @@ public class CustomerController {
                     CustomerResponse response = customerMapper.toResponse(customer);
                     return ResponseEntity.ok(response);
                 })
-                .onErrorResume(e -> Mono.just(ResponseEntity.notFound().build()));
+                .onErrorResume(e -> {
+                    return Mono.just(ResponseEntity.notFound().build());
+                });
     }
     
     @GetMapping("/customer")
@@ -71,11 +74,19 @@ public class CustomerController {
     @GetMapping("/mocks/customer/{filename}")
     public Mono<ResponseEntity<String>> getMockCustomer(@PathVariable String filename) {
         return Mono.fromCallable(() -> {
-            Resource resource = resourceLoader.getResource("classpath:mocks/customer/" + filename);
-            String content = new String(resource.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
-            return ResponseEntity.ok()
-                    .header("Content-Type", "application/json")
-                    .body(content);
+            try {
+                Resource resource = resourceLoader.getResource("classpath:mocks/customer/" + filename);
+                if (resource.exists() && resource.isReadable()) {
+                    String content = new String(resource.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+                    return ResponseEntity.ok()
+                            .header("Content-Type", "application/json")
+                            .body(content);
+                } else {
+                    return ResponseEntity.notFound().build();
+                }
+            } catch (IOException e) {
+                throw new RuntimeException("Error reading mock file: " + filename, e);
+            }
         });
     }
 }

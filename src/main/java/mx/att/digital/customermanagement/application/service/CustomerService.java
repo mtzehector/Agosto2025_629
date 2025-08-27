@@ -1,9 +1,9 @@
 package mx.att.digital.customermanagement.application.service;
 
-import mx.att.digital.customermanagement.application.exception.CustomerNotFoundException;
 import mx.att.digital.customermanagement.application.port.in.CustomerUseCase;
 import mx.att.digital.customermanagement.application.port.out.CustomerRepositoryPort;
 import mx.att.digital.customermanagement.domain.model.Customer;
+import mx.att.digital.customermanagement.application.exception.CustomerNotFoundException;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
@@ -20,16 +20,21 @@ public class CustomerService implements CustomerUseCase {
     
     @Override
     public Mono<Customer> createCustomer(Customer customer) {
-        return Mono.fromCallable(() -> {
-            customer.setCreatedDate(java.time.LocalDateTime.now());
-            customer.setLastModifiedDate(java.time.LocalDateTime.now());
+        return Mono.fromSupplier(() -> {
+            // Asignar fechas si no están establecidas
+            if (customer.getCreatedDate() == null) {
+                customer.setCreatedDate(java.time.LocalDateTime.now());
+            }
+            if (customer.getLastModifiedDate() == null) {
+                customer.setLastModifiedDate(java.time.LocalDateTime.now());
+            }
             return customerRepositoryPort.save(customer);
         });
     }
     
     @Override
     public Mono<Customer> getCustomerById(String id) {
-        return Mono.fromCallable(() -> 
+        return Mono.fromSupplier(() -> 
             customerRepositoryPort.findById(id)
                 .orElseThrow(() -> new CustomerNotFoundException("Customer not found with id: " + id))
         );
@@ -37,7 +42,7 @@ public class CustomerService implements CustomerUseCase {
     
     @Override
     public Mono<List<Customer>> getAllCustomers() {
-        return Mono.fromCallable(customerRepositoryPort::findAll);
+        return Mono.fromSupplier(() -> customerRepositoryPort.findAll());
     }
     
     @Override
@@ -52,7 +57,7 @@ public class CustomerService implements CustomerUseCase {
     
     @Override
     public Mono<Customer> updateCustomer(String id, Customer customer) {
-        return Mono.fromCallable(() -> {
+        return Mono.fromSupplier(() -> {
             if (!customerRepositoryPort.existsById(id)) {
                 throw new CustomerNotFoundException("Customer not found with id: " + id);
             }

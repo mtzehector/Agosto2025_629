@@ -4,5 +4,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BeanConfig {
-    // Configuración adicional de beans si es necesaria
+    // Esta clase puede estar vacía por ahora
+    // Spring Boot detectará automáticamente los @Component y @Service
 }
