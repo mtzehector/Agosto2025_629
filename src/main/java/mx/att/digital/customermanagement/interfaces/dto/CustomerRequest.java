@@ -1,18 +1,10 @@
 package mx.att.digital.customermanagement.interfaces.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class CustomerRequest {
-    @JsonProperty("name")
     private String name;
-    
-    @JsonProperty("email")
     private String email;
-    
-    @JsonProperty("status")
     private String status;
     
-    // Getters y Setters
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
     
