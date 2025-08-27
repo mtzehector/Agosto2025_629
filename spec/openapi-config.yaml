@@ -1,0 +1,37 @@
+# openapi-config.yaml
+basePackage: "mx.att.digital.customermanagement"
+apiPackage: "mx.att.digital.customermanagement.adapter.in.web"
+modelPackage: "mx.att.digital.customermanagement.interfaces.dto"
+invokerPackage: "mx.att.digital.customermanagement.application"
+configPackage: "mx.att.digital.customermanagement.config"
+
+interfaceOnly: false
+delegatePattern: true
+reactive: true
+useSpringBoot3: true
+java21: true
+dateLibrary: java8
+serializableModel: true
+
+generateSpringBootApplication: true
+applicationName: CustomerManagementApplication
+applicationPackage: "mx.att.digital.customermanagement"
+
+hideGenerationTimestamp: true
+
+apiTests: false
+modelTests: false
+apiDocs: false
+modelDocs: false
+
+typeMappings:
+  AccountRefFVO: EntityRefFVO
+  AgreementRefFVO: EntityRefFVO
+  PaymentMethodRefFVO: EntityRefFVO
+  AccountRef: EntityRef
+  AgreementRef: EntityRef
+  PaymentMethodRef: EntityRef
+  AccountRefMVO: EntityRefMVO
+  AgreementRefMVO: EntityRefMVO
+  PaymentMethodRefMVO: EntityRefMVO
+
