@@ -1,0 +1,7 @@
+{
+  "@type": "Customer",
+  "id": "10003",
+  "href": "/tmf-api/customer/v5/customer/10003",
+  "name": "Fintech",
+  "status": "pending"
+}

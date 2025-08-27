@@ -30,7 +30,7 @@ public class CustomerController {
     @PostMapping("/customer")
     public Mono<ResponseEntity<CustomerResponse>> createCustomer(@RequestBody CustomerRequest request) {
         Customer customer = new Customer(
-            null, // ID será generado
+            null,
             request.getName(),
             request.getEmail(),
             request.getStatus()
@@ -88,11 +88,15 @@ public class CustomerController {
     @GetMapping("/mocks/customer/{filename}")
     public Mono<ResponseEntity<String>> getMockCustomer(@PathVariable String filename) {
         return Mono.fromCallable(() -> {
-            Resource resource = resourceLoader.getResource("classpath:mocks/customer/" + filename);
-            String content = new String(resource.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
-            return ResponseEntity.ok()
-                    .header("Content-Type", "application/json")
-                    .body(content);
+            try {
+                Resource resource = resourceLoader.getResource("classpath:mocks/customer/" + filename);
+                String content = new String(resource.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+                return ResponseEntity.ok()
+                        .header("Content-Type", "application/json")
+                        .body(content);
+            } catch (IOException e) {
+                throw new RuntimeException("Error reading mock file: " + filename, e);
+            }
         });
     }
 }

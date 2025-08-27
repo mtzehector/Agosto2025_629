@@ -17,7 +17,7 @@ public class InMemoryCustomerRepository implements CustomerRepositoryPort {
     @Override
     public Customer save(Customer customer) {
         if (customer.getId() == null) {
-            String newId = String.valueOf(idCounter.getAndIncrement());
+            String newId = "CUST-" + idCounter.getAndIncrement();
             customer.setId(newId);
         }
         customers.put(customer.getId(), customer);
