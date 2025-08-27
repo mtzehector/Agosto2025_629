@@ -1,0 +1,23 @@
+Memoria TMF629 v5.0.1
+Descargar especificación en la carpeta spec
+Editar openapi-config.yaml en la carpeta spec
+Descargar openapi generator en la carpeta tools
+
+Generar proyecto:
+java -jar tools/openapi-generator-cli-7.10.0.jar generate --skip-validate-spec -i spec/TMF629-Customer_Management-v5.0.1.oas.yaml -g spring -c spec/openapi-config.yaml -o customer-management
+java -jar tools/openapi-generator-cli-7.10.0.jar generate -i spec/TMF629-Customer_Management-v5.0.1.oas.yaml -g spring -c spec/openapi-config.yaml -o ./generated-code --skip-validate-spec
+Corregir pom:
+	<java.version>21</java.version>
+        <version>3.5.4</version>
+Construir y levantar
+	mvn clean package && mvn spring-boot:run
+Carpetas vacias para puertos y adaptadores:
+	adapter.out.persistence
+	domain.service
+mocks:
+	Postman o Browser 
+	GET Customer/{id}
+SonarQube:
+	Identificar y dividir metodos largos en funciones pequeñas
+	Usa herencia o composición para compartir flujos semejantes
+	Validar todos los inputs
