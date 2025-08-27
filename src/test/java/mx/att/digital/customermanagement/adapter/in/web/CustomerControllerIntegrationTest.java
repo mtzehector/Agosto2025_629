@@ -1,6 +1,7 @@
 package mx.att.digital.customermanagement.adapter.in.web;
 
 import mx.att.digital.customermanagement.adapter.out.persistence.InMemoryCustomerRepository;
+import mx.att.digital.customermanagement.interfaces.rest.CustomerController;
 import mx.att.digital.customermanagement.adapter.in.web.dto.Customer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

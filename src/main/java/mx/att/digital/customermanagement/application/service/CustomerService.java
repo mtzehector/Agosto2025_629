@@ -1,16 +1,34 @@
 package mx.att.digital.customermanagement.application.service;
 
-import mx.att.digital.customermanagement.application.port.input.CustomerInputPort;
-import mx.att.digital.customermanagement.adapter.in.web.dto.Customer;
-import mx.att.digital.customermanagement.adapter.in.web.dto.CustomerFVO;
-import mx.att.digital.customermanagement.adapter.in.web.dto.CustomerMVO;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
+import mx.att.digital.customermanagement.application.port.in.CustomerUseCase;
+import mx.att.digital.customermanagement.application.port.out.CustomerRepositoryPort;
+import mx.att.digital.customermanagement.domain.model.Customer;
+import org.springframework.stereotype.Service;
 
-public interface CustomerService extends CustomerInputPort {
-  Mono<Customer> create(Mono<CustomerFVO> customerFVO, String fields);
-  Mono<Void> delete(String id);
-  Flux<Customer> list(String fields, Integer offset, Integer limit);
-  Mono<Customer> patch(String id, Mono<CustomerMVO> customerMVO, String fields);
-  Mono<Customer> retrieve(String id, String fields);
+import java.util.List;
+
+@Service
+public class CustomerService implements CustomerUseCase {
+    
+    private final CustomerRepositoryPort customerRepositoryPort;
+    
+    public CustomerService(CustomerRepositoryPort customerRepositoryPort) {
+        this.customerRepositoryPort = customerRepositoryPort;
+    }
+    
+    @Override
+    public Customer createCustomer(Customer customer) {
+        return customerRepositoryPort.save(customer);
+    }
+    
+    @Override
+    public Customer getCustomerById(String id) {
+        return customerRepositoryPort.findById(id)
+                .orElseThrow(() -> new RuntimeException("Customer not found"));
+    }
+    
+    @Override
+    public List<Customer> getAllCustomers() {
+        return customerRepositoryPort.findAll();
+    }
 }

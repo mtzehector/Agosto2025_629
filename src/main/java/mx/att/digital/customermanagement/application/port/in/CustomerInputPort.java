@@ -1,4 +1,4 @@
-package mx.att.digital.customermanagement.application.port.input;
+package mx.att.digital.customermanagement.application.port.in;
 
 import mx.att.digital.customermanagement.adapter.in.web.dto.Customer;
 import reactor.core.publisher.Mono;
