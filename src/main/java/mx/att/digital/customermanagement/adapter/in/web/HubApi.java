@@ -5,6 +5,9 @@
  */
 package mx.att.digital.customermanagement.adapter.in.web;
 
+import mx.att.digital.customermanagement.interfaces.dto.Error;
+import mx.att.digital.customermanagement.interfaces.dto.Hub;
+import mx.att.digital.customermanagement.interfaces.dto.HubFVO;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -27,10 +30,6 @@ import org.springframework.http.codec.multipart.Part;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
-import mx.att.digital.customermanagement.interfaces.dto.Error;
-import mx.att.digital.customermanagement.interfaces.dto.Hub;
-import mx.att.digital.customermanagement.interfaces.dto.HubFVO;
-
 import java.util.List;
 import java.util.Map;
 import jakarta.annotation.Generated;

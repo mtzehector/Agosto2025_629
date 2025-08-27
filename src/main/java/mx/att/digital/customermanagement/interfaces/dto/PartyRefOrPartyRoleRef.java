@@ -7,14 +7,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-
+import mx.att.digital.customermanagement.interfaces.dto.PartyRef;
+import mx.att.digital.customermanagement.interfaces.dto.PartyRoleRef;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
-import mx.att.digital.customermanagement.interfaces.dto.PartyRef;
-import mx.att.digital.customermanagement.interfaces.dto.PartyRoleRef;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 

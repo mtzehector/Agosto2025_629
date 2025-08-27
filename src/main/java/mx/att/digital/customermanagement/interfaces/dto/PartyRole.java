@@ -10,6 +10,12 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import mx.att.digital.customermanagement.interfaces.dto.Characteristic;
+import mx.att.digital.customermanagement.interfaces.dto.ContactMedium;
+import mx.att.digital.customermanagement.interfaces.dto.CreditProfile;
+import mx.att.digital.customermanagement.interfaces.dto.EntityRef;
+import mx.att.digital.customermanagement.interfaces.dto.RelatedPartyOrPartyRole;
+import mx.att.digital.customermanagement.interfaces.dto.TimePeriod;
 import java.time.OffsetDateTime;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -17,12 +23,6 @@ import java.io.Serializable;
 import java.time.OffsetDateTime;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
-import mx.att.digital.customermanagement.interfaces.dto.Characteristic;
-import mx.att.digital.customermanagement.interfaces.dto.ContactMedium;
-import mx.att.digital.customermanagement.interfaces.dto.CreditProfile;
-import mx.att.digital.customermanagement.interfaces.dto.EntityRef;
-import mx.att.digital.customermanagement.interfaces.dto.RelatedPartyOrPartyRole;
-import mx.att.digital.customermanagement.interfaces.dto.TimePeriod;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 

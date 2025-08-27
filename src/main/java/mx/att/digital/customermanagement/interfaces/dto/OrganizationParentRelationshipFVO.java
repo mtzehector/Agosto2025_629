@@ -8,13 +8,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeName;
-
+import mx.att.digital.customermanagement.interfaces.dto.OrganizationRefFVO;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
-import mx.att.digital.customermanagement.interfaces.dto.OrganizationRefFVO;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 

@@ -1,5 +1,10 @@
 package mx.att.digital.customermanagement.adapter.in.web;
 
+import mx.att.digital.customermanagement.interfaces.dto.Error;
+import mx.att.digital.customermanagement.interfaces.dto.Hub;
+import mx.att.digital.customermanagement.interfaces.dto.HubFVO;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,9 +20,6 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.validation.constraints.*;
-import mx.att.digital.customermanagement.interfaces.dto.Error;
-import mx.att.digital.customermanagement.interfaces.dto.Hub;
-import mx.att.digital.customermanagement.interfaces.dto.HubFVO;
 import jakarta.validation.Valid;
 
 import java.util.List;

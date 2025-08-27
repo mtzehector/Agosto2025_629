@@ -11,15 +11,14 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+import mx.att.digital.customermanagement.interfaces.dto.AttachmentRefOrValueFVO;
+import mx.att.digital.customermanagement.interfaces.dto.TaxDefinition;
+import mx.att.digital.customermanagement.interfaces.dto.TimePeriod;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
-import mx.att.digital.customermanagement.interfaces.dto.AttachmentRefOrValueFVO;
-import mx.att.digital.customermanagement.interfaces.dto.TaxDefinition;
-import mx.att.digital.customermanagement.interfaces.dto.TimePeriod;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 

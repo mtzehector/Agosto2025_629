@@ -149,11 +149,9 @@ mx/att/digital/customermanagement/interfaces/dto/CustomerAttributeValueChangeEve
 mx/att/digital/customermanagement/adapter/in/web/ListenerApiDelegate.class
 mx/att/digital/customermanagement/interfaces/dto/AccountRef.class
 mx/att/digital/customermanagement/adapter/in/web/HubApi.class
-mx/att/digital/customermanagement/interfaces/dto/CustomerResponse.class
 mx/att/digital/customermanagement/interfaces/dto/FloatCharacteristicMVO.class
 mx/att/digital/customermanagement/interfaces/dto/BaseEvent.class
 mx/att/digital/customermanagement/interfaces/dto/BusinessPartner.class
-mx/att/digital/customermanagement/interfaces/dto/CustomerRequest.class
 mx/att/digital/customermanagement/interfaces/dto/CharacteristicRelationshipFVO.class
 mx/att/digital/customermanagement/interfaces/dto/FaxContactMedium.class
 mx/att/digital/customermanagement/interfaces/dto/OrganizationChildRelationship.class

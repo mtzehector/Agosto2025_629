@@ -61,8 +61,6 @@
 /mnt/d/wsl/CustomerManagement/customer-management/src/main/java/mx/att/digital/customermanagement/interfaces/dto/CustomerDeleteEventPayload.java
 /mnt/d/wsl/CustomerManagement/customer-management/src/main/java/mx/att/digital/customermanagement/interfaces/dto/CustomerFVO.java
 /mnt/d/wsl/CustomerManagement/customer-management/src/main/java/mx/att/digital/customermanagement/interfaces/dto/CustomerMVO.java
-/mnt/d/wsl/CustomerManagement/customer-management/src/main/java/mx/att/digital/customermanagement/interfaces/dto/CustomerRequest.java
-/mnt/d/wsl/CustomerManagement/customer-management/src/main/java/mx/att/digital/customermanagement/interfaces/dto/CustomerResponse.java
 /mnt/d/wsl/CustomerManagement/customer-management/src/main/java/mx/att/digital/customermanagement/interfaces/dto/CustomerStateChangeEvent.java
 /mnt/d/wsl/CustomerManagement/customer-management/src/main/java/mx/att/digital/customermanagement/interfaces/dto/CustomerStateChangeEventPayload.java
 /mnt/d/wsl/CustomerManagement/customer-management/src/main/java/mx/att/digital/customermanagement/interfaces/dto/Disability.java

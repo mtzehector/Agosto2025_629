@@ -12,13 +12,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.time.OffsetDateTime;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.openapitools.jackson.nullable.JsonNullable;
-import java.io.Serializable;
-import java.time.OffsetDateTime;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.*;
 import mx.att.digital.customermanagement.interfaces.dto.CharacteristicMVO;
 import mx.att.digital.customermanagement.interfaces.dto.ContactMediumMVO;
 import mx.att.digital.customermanagement.interfaces.dto.ExternalIdentifierMVO;
@@ -32,6 +25,13 @@ import mx.att.digital.customermanagement.interfaces.dto.PartyMVO;
 import mx.att.digital.customermanagement.interfaces.dto.RelatedPartyOrPartyRoleMVO;
 import mx.att.digital.customermanagement.interfaces.dto.TaxExemptionCertificateMVO;
 import mx.att.digital.customermanagement.interfaces.dto.TimePeriod;
+import java.time.OffsetDateTime;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.io.Serializable;
+import java.time.OffsetDateTime;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 

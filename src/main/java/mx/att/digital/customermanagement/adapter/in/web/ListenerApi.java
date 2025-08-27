@@ -5,6 +5,11 @@
  */
 package mx.att.digital.customermanagement.adapter.in.web;
 
+import mx.att.digital.customermanagement.interfaces.dto.CustomerAttributeValueChangeEvent;
+import mx.att.digital.customermanagement.interfaces.dto.CustomerCreateEvent;
+import mx.att.digital.customermanagement.interfaces.dto.CustomerDeleteEvent;
+import mx.att.digital.customermanagement.interfaces.dto.CustomerStateChangeEvent;
+import mx.att.digital.customermanagement.interfaces.dto.Error;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -27,12 +32,6 @@ import org.springframework.http.codec.multipart.Part;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
-import mx.att.digital.customermanagement.interfaces.dto.CustomerAttributeValueChangeEvent;
-import mx.att.digital.customermanagement.interfaces.dto.CustomerCreateEvent;
-import mx.att.digital.customermanagement.interfaces.dto.CustomerDeleteEvent;
-import mx.att.digital.customermanagement.interfaces.dto.CustomerStateChangeEvent;
-import mx.att.digital.customermanagement.interfaces.dto.Error;
-
 import java.util.List;
 import java.util.Map;
 import jakarta.annotation.Generated;

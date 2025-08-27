@@ -8,15 +8,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import java.time.OffsetDateTime;
-
+import mx.att.digital.customermanagement.interfaces.dto.AttachmentRefOrValue;
+import mx.att.digital.customermanagement.interfaces.dto.TimePeriod;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
-import mx.att.digital.customermanagement.interfaces.dto.AttachmentRefOrValue;
-import mx.att.digital.customermanagement.interfaces.dto.TimePeriod;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 

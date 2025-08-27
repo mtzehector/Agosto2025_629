@@ -1,5 +1,12 @@
 package mx.att.digital.customermanagement.adapter.in.web;
 
+import mx.att.digital.customermanagement.interfaces.dto.CustomerAttributeValueChangeEvent;
+import mx.att.digital.customermanagement.interfaces.dto.CustomerCreateEvent;
+import mx.att.digital.customermanagement.interfaces.dto.CustomerDeleteEvent;
+import mx.att.digital.customermanagement.interfaces.dto.CustomerStateChangeEvent;
+import mx.att.digital.customermanagement.interfaces.dto.Error;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,11 +22,6 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.validation.constraints.*;
-import mx.att.digital.customermanagement.interfaces.dto.CustomerAttributeValueChangeEvent;
-import mx.att.digital.customermanagement.interfaces.dto.CustomerCreateEvent;
-import mx.att.digital.customermanagement.interfaces.dto.CustomerDeleteEvent;
-import mx.att.digital.customermanagement.interfaces.dto.CustomerStateChangeEvent;
-import mx.att.digital.customermanagement.interfaces.dto.Error;
 import jakarta.validation.Valid;
 
 import java.util.List;
