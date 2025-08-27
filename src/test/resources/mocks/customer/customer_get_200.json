@@ -1,0 +1,8 @@
+{
+  "id": "CUST-123456",
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "status": "Active",
+  "createDate": "2024-01-15T10:30:00",
+  "lastUpdate": "2024-08-27T14:45:00"
+}

@@ -1,52 +1,11 @@
 package mx.att.digital.customermanagement.interfaces.dto;
 
-import java.net.URI;
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import java.time.OffsetDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import mx.att.digital.customermanagement.domain.model.EntityRef;
-import mx.att.digital.customermanagement.interfaces.dto.BusinessPartner;
-import mx.att.digital.customermanagement.interfaces.dto.Characteristic;
-import mx.att.digital.customermanagement.interfaces.dto.Consumer;
-import mx.att.digital.customermanagement.interfaces.dto.ContactMedium;
-import mx.att.digital.customermanagement.interfaces.dto.CreditProfile;
-import mx.att.digital.customermanagement.interfaces.dto.Disability;
-import mx.att.digital.customermanagement.interfaces.dto.ExternalIdentifier;
-import mx.att.digital.customermanagement.interfaces.dto.Individual;
-import mx.att.digital.customermanagement.interfaces.dto.IndividualIdentification;
-import mx.att.digital.customermanagement.interfaces.dto.LanguageAbility;
-import mx.att.digital.customermanagement.interfaces.dto.Organization;
-import mx.att.digital.customermanagement.interfaces.dto.OrganizationChildRelationship;
-import mx.att.digital.customermanagement.interfaces.dto.OrganizationIdentification;
-import mx.att.digital.customermanagement.interfaces.dto.OrganizationParentRelationship;
-import mx.att.digital.customermanagement.interfaces.dto.OtherNameOrganization;
-import mx.att.digital.customermanagement.interfaces.dto.PartyCreditProfile;
-import mx.att.digital.customermanagement.interfaces.dto.PartyRef;
-import mx.att.digital.customermanagement.interfaces.dto.PartyRole;
-import mx.att.digital.customermanagement.interfaces.dto.PartyRoleRef;
-import mx.att.digital.customermanagement.interfaces.dto.Producer;
-import mx.att.digital.customermanagement.interfaces.dto.RelatedPartyOrPartyRole;
-import mx.att.digital.customermanagement.interfaces.dto.Skill;
-import mx.att.digital.customermanagement.interfaces.dto.Supplier;
-import mx.att.digital.customermanagement.interfaces.dto.TaxExemptionCertificate;
-import mx.att.digital.customermanagement.interfaces.dto.TimePeriod;
-import org.springframework.format.annotation.DateTimeFormat;
-import java.io.Serializable;
-import java.time.OffsetDateTime;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.*;
-import io.swagger.v3.oas.annotations.media.Schema;
-
-
-import java.util.*;
 import jakarta.annotation.Generated;
+
+import java.io.Serializable;
 
 
 @JsonIgnoreProperties(

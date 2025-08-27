@@ -1,20 +1,8 @@
 package mx.att.digital.customermanagement.interfaces.dto;
 
-import java.net.URI;
-import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonValue;
-import java.io.Serializable;
-import java.time.OffsetDateTime;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.*;
-import io.swagger.v3.oas.annotations.media.Schema;
-
-
-import java.util.*;
-import jakarta.annotation.Generated;
-
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import jakarta.annotation.Generated;
 
 /**
  * Valid values for the lifecycle state of the individual

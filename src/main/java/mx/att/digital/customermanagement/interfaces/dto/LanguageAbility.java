@@ -1,19 +1,12 @@
 package mx.att.digital.customermanagement.interfaces.dto;
 
-import java.net.URI;
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import mx.att.digital.customermanagement.interfaces.dto.TimePeriod;
-import java.io.Serializable;
-import java.time.OffsetDateTime;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
-
-
-import java.util.*;
 import jakarta.annotation.Generated;
+import jakarta.validation.Valid;
+
+import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * Ability of an individual to understand or converse in a language.
