@@ -1,8 +1,0 @@
-/mnt/d/wsl/CustomerManagement/customer-management/src/test/java/mx/att/digital/customermanagement/OpenApiGeneratorApplicationTests.java
-/mnt/d/wsl/CustomerManagement/customer-management/src/test/java/mx/att/digital/customermanagement/adapter/in/web/CustomerApiControllerTest.java
-/mnt/d/wsl/CustomerManagement/customer-management/src/test/java/mx/att/digital/customermanagement/adapter/in/web/CustomerApiIntegrationTest.java
-/mnt/d/wsl/CustomerManagement/customer-management/src/test/java/mx/att/digital/customermanagement/adapter/in/web/CustomerApiMockTest.java
-/mnt/d/wsl/CustomerManagement/customer-management/src/test/java/mx/att/digital/customermanagement/adapter/in/web/delegate/CustomerApiDelegateImplTest.java
-/mnt/d/wsl/CustomerManagement/customer-management/src/test/java/mx/att/digital/customermanagement/adapter/out/mock/MockCustomerRepositoryTest.java
-/mnt/d/wsl/CustomerManagement/customer-management/src/test/java/mx/att/digital/customermanagement/config/TestConfig.java
-/mnt/d/wsl/CustomerManagement/customer-management/src/test/java/mx/att/digital/customermanagement/util/JsonTestUtils.java
