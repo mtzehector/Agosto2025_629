@@ -5,37 +5,23 @@
  */
 package mx.att.digital.customermanagement.adapter.in.web;
 
-import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.Parameters;
-import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import jakarta.annotation.Generated;
+import jakarta.validation.Valid;
+import mx.att.digital.customermanagement.interfaces.dto.*;
+import mx.att.digital.customermanagement.interfaces.dto.Error;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.server.ServerWebExchange;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import org.springframework.http.codec.multipart.Part;
-
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.*;
-import mx.att.digital.customermanagement.interfaces.dto.CustomerAttributeValueChangeEvent;
-import mx.att.digital.customermanagement.interfaces.dto.CustomerCreateEvent;
-import mx.att.digital.customermanagement.interfaces.dto.CustomerDeleteEvent;
-import mx.att.digital.customermanagement.interfaces.dto.CustomerStateChangeEvent;
-import mx.att.digital.customermanagement.interfaces.dto.Error;
-
-import java.util.List;
-import java.util.Map;
-import jakarta.annotation.Generated;
 
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.10.0")
 @Validated

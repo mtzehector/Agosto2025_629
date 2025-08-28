@@ -1,11 +1,10 @@
 package mx.att.digital.customermanagement.config;
 
+import mx.att.digital.customermanagement.interfaces.dto.IndividualStateType;
+import mx.att.digital.customermanagement.interfaces.dto.OrganizationStateType;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.convert.converter.Converter;
-
-import mx.att.digital.customermanagement.interfaces.dto.IndividualStateType;
-import mx.att.digital.customermanagement.interfaces.dto.OrganizationStateType;
 
 @Configuration
 public class EnumConverterConfiguration {

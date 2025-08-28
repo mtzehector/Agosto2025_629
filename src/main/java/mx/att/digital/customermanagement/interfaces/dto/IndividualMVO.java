@@ -1,43 +1,16 @@
 package mx.att.digital.customermanagement.interfaces.dto;
 
-import java.net.URI;
-import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.fasterxml.jackson.annotation.JsonTypeName;
-import com.fasterxml.jackson.annotation.JsonValue;
-import java.time.OffsetDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.annotation.Generated;
+import jakarta.validation.Valid;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.openapitools.jackson.nullable.JsonNullable;
+
 import java.io.Serializable;
 import java.time.OffsetDateTime;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.*;
-import mx.att.digital.customermanagement.interfaces.dto.CharacteristicMVO;
-import mx.att.digital.customermanagement.interfaces.dto.ContactMediumMVO;
-import mx.att.digital.customermanagement.interfaces.dto.Disability;
-import mx.att.digital.customermanagement.interfaces.dto.ExternalIdentifierMVO;
-import mx.att.digital.customermanagement.interfaces.dto.IndividualIdentificationMVO;
-import mx.att.digital.customermanagement.interfaces.dto.IndividualStateType;
-import mx.att.digital.customermanagement.interfaces.dto.LanguageAbility;
-import mx.att.digital.customermanagement.interfaces.dto.OtherNameIndividual;
-import mx.att.digital.customermanagement.interfaces.dto.PartyCreditProfileMVO;
-import mx.att.digital.customermanagement.interfaces.dto.PartyMVO;
-import mx.att.digital.customermanagement.interfaces.dto.RelatedPartyOrPartyRoleMVO;
-import mx.att.digital.customermanagement.interfaces.dto.Skill;
-import mx.att.digital.customermanagement.interfaces.dto.TaxExemptionCertificateMVO;
-import io.swagger.v3.oas.annotations.media.Schema;
-
-
-import java.util.*;
-import jakarta.annotation.Generated;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 /**
  * IndividualMVO
